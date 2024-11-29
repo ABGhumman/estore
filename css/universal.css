@@ -5,8 +5,9 @@
   box-sizing: border-box;
 }
 
+/* General Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
   line-height: 1.6;
   background-color: #f4f7fc; /* Light blue background */
   color: #333;
@@ -20,15 +21,38 @@ body {
 
 /* Header Section */
 header {
-  background-color: #003366; /* Dark blue */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1e90ff, #4682b4);
   color: white;
-  padding: 20px 0;
-  text-align: center;
+  padding: 20px;
 }
 
-header h1 {
+header .logo h1 {
   font-size: 2.5rem;
   letter-spacing: 1px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
 }
 
 /* Banner */
@@ -88,7 +112,7 @@ header h1 {
 }
 
 .cta-button {
-  background-color: #007bff; /* Blue button */
+  background-color: #1e90ff;
   color: white;
   padding: 10px 20px;
   text-decoration: none;
@@ -127,8 +151,15 @@ header h1 {
   font-size: 1rem;
 }
 
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #1e90ff;
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.5);
+}
+
 .contact-form button {
-  background-color: #0056b3; /* Blue button */
+  background-color: #0056b3;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -144,11 +175,10 @@ header h1 {
 
 /* Footer */
 footer {
-  background-color: #003366; /* Dark blue footer */
+  background-color: #003366;
   color: white;
   text-align: center;
   padding: 20px 0;
-  margin-top: 50px;
 }
 
 footer p {
@@ -158,16 +188,16 @@ footer p {
 /* Responsive Design */
 @media (max-width: 768px) {
   .promo {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .promo-item {
-      width: 80%;
-      margin-bottom: 20px;
+    width: 80%;
+    margin-bottom: 20px;
   }
 
   .cta-button {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
